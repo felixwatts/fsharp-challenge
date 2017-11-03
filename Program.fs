@@ -48,6 +48,8 @@ let get x y ca =
     ca.livingCells |> Set.contains (x, y)
 
 // set state of specified cell
+// this is probably horribly inefficient due to copying the whole set every time. I'm not sure
+// how this copying cost is normally minimized in functional pogramming :/
 let set x y isAlive ca =
     let isOnBoard = isOnBoard ca (x, y)
     match isOnBoard with
