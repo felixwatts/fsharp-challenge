@@ -211,7 +211,7 @@ let rec doCommand ca =
 [<EntryPoint>]
 let main argv =
 
-    let mutable ca = empty (bigint(100)) (bigint(100))
+    let ca = empty (bigint(100)) (bigint(100))
 
     doCommand ca |> ignore
 
